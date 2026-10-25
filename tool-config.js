@@ -1,0 +1,89 @@
+export const tool={
+  "id": "E071",
+  "slug": "eng-rayleigh-number",
+  "title": "레이리수 계산기",
+  "title_en": "Rayleigh Number Calculator",
+  "category": "열",
+  "category_en": "Heat transfer",
+  "fields": [
+    {
+      "key": "g",
+      "label": "중력가속도 g",
+      "label_en": "Gravitational acceleration g",
+      "dimension": "acceleration",
+      "example": 10,
+      "constraint": "positive",
+      "display_unit": "ms2",
+      "display_value": "10"
+    },
+    {
+      "key": "beta",
+      "label": "체적 열팽창계수 β",
+      "label_en": "Volume expansion coefficient β",
+      "dimension": "expansion",
+      "example": 0.003,
+      "constraint": "positive",
+      "display_unit": "microK",
+      "display_value": "3000"
+    },
+    {
+      "key": "dt",
+      "label": "구동 온도차 크기 ΔT",
+      "label_en": "Driving temperature difference ΔT",
+      "dimension": "deltaT",
+      "example": 10,
+      "constraint": "positive",
+      "display_unit": "Kdiff",
+      "display_value": "10"
+    },
+    {
+      "key": "l",
+      "label": "특성길이 L",
+      "label_en": "Characteristic length L",
+      "dimension": "length",
+      "example": 0.1,
+      "constraint": "positive",
+      "display_unit": "m",
+      "display_value": "0.1"
+    },
+    {
+      "key": "nu",
+      "label": "동점성계수 ν",
+      "label_en": "Kinematic viscosity ν",
+      "dimension": "kinematic",
+      "example": 1e-05,
+      "constraint": "positive",
+      "display_unit": "m2s",
+      "display_value": "1e-05"
+    },
+    {
+      "key": "alpha",
+      "label": "열확산계수 α",
+      "label_en": "Thermal diffusivity α",
+      "dimension": "kinematic",
+      "example": 2e-05,
+      "constraint": "positive",
+      "display_unit": "m2s",
+      "display_value": "2e-05"
+    }
+  ],
+  "result_label": "레이리수 Ra",
+  "result_label_en": "Rayleigh number Ra",
+  "result_dimension": "ratio",
+  "formula": "Ra = gβΔT L³/(να)",
+  "purpose": "자연대류에서 부력과 확산의 상대 크기를 나타내는 레이리수 계산",
+  "purpose_en": "Calculate the Rayleigh number for a specified natural-convection configuration.",
+  "assumptions": "모든 입력>0. 같은 기준 상태의 물성과 구성에 맞는 L·ΔT를 사용한다. βΔT가 작은 Boussinesq 근사 범위의 값이다. 형상별 임계값·열전달 상관식·대류 발생 판정은 출력하지 않는다. 이 앱은 βΔT≤0.1로 제한한다.",
+  "assumptions_en": "Required: positive inputs, properties at a common reference state, and L and ΔT appropriate to the geometry. Boussinesq approximation with small βΔT. Geometry-specific thresholds, correlations and convection classification are excluded. This app additionally restricts βΔT≤0.1.",
+  "sources": [
+    {
+      "label": "University of Illinois · Nenad Miljkovic · ME420 notes",
+      "url": "https://etrl.mechanical.illinois.edu/pdf/ME420/ME420%20Complete%20Lecture%20Notes.pdf"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-rayleigh-number/",
+  "repository": "https://github.com/NaNaCompany/eng-rayleigh-number",
+  "output_unit": "1"
+};
